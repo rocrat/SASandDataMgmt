@@ -1,0 +1,42 @@
+/*create dummy variables for race and female*/
+data gfr;
+set class.test_sample_3b;
+if (r_gender = 'U' or r_gender = '') then r_gender = .; /*set U or blank to missing in gender*/
+if r_gender = . then fem = .;
+if r_gender = 'F' then fem = 1;
+if r_gender = 'M' then fem = 0;
+if r_race = 'AfrAmeri' then blk = 1;
+  else blk = 0;
+run;
+
+/*use arrays to loop through each CR measurement
+and calculate eGFR*/
+data egfr;
+set gfr;
+
+  egfr_base = 186*(CR_1M**-1.154)*(r_age**-0.203);
+if (fem = 1 and blk = 1) then egfr = egfr_base*1.21*0.742;
+if (fem = 1 and blk = 0) then egfr = egfr_base*0.742;
+if (fem = 0 and blk = 1) then egfr = egfr_base*1.21;
+if (fem = 0 and blk = 0) then egfr = egfr_base;
+
+drop egfr_base;
+run;
+
+
+/* ceate ckd stages- care must be taken since the range of egfr
+is outside the values for ckd stage.
+I will create a stage 0 which indicates healthy kidney function.
+Also missing values are considered very
+small numbers so I will have to be careful of those*/
+
+data ckd;
+set egfr;
+if (egfr > 100) then ckdstg = 0;
+if (90 le egfr le 100) then ckdstg = 1;
+if (60 le egfr lt 90) then ckdstg = 2;
+if (30 le egfr lt 60) then ckdstg = 3;
+if (15 le egfr lt 30) then ckdstg = 4;
+if (0 le egfr lt 15) then ckdstg = 5;
+run;
+

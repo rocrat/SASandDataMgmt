@@ -1,0 +1,11 @@
+                            The UNIVARIATE Procedure
+                                Variable:  egfr
+ 
+                                    Moments
+ 
+        N                         290    Sum Weights                290
+        Mean               53.9208838    Sum Observations    15637.0563
+        Std Deviation       17.847589    Variance            318.536432
+        Skewness           1.08197961    Kurtosis             3.3437137
+        Uncorrected SS     935220.923    Corrected SS        92057.0287
+        Coeff Variation    33.0995854    Std Error Mean      1.04804651

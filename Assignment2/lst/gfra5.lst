@@ -1,0 +1,7 @@
+                           Tests for Location: Mu0=0
+ 
+                Test           -Statistic-    -----p Value------
+ 
+                Student's t    t  51.44894    Pr > |t|    <.0001
+                Sign           M       145    Pr >= |M|   <.0001
+                Signed Rank    S   21097.5    Pr >= |S|   <.0001

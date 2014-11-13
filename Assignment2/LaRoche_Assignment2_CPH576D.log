@@ -1,0 +1,267 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.7)  17 SEP 2014 19:38
+entering extended mode
+**LaRoche_Assignment2_CPH576D.tex
+(C:\Classes\SASandDataMgmt\Assignment2\LaRoche_Assignment2_CPH576D.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\latex\framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip44
+)
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\latex\statrep\statrep.sty
+Package: statrep 2012/5/23 v1.01 The statrep package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+\XKV@depth=\count88
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen109
+\calc@Bdimen=\dimen110
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count91
+\calc@Cskip=\skip47
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\latex\statrep\longfigure.sty
+Package: longfigure 2012/03/15 Multi-page Figure Package
+\LFleft=\skip48
+\LFright=\skip49
+\LFpre=\skip50
+\LFpost=\skip51
+\LFchunksize=\count92
+\LFcapwidth=\dimen111
+\LF@head=\box26
+\LF@firsthead=\box27
+\LF@foot=\box28
+\LF@lastfoot=\box29
+\LF@cols=\count93
+\LF@rows=\count94
+\c@LF@tables=\count95
+\c@LF@chunks=\count96
+\LF@p@ftn=\toks19
+)
+\SR@scratchlength=\skip52
+\SR@verbwidth=\skip53
+\SR@filebox=\box30
+\c@SR@currentline=\count97
+\c@SR@displayline=\count98
+\c@SR@programline=\count99
+\c@SR@startinglastline=\count100
+\c@SR@totallines=\count101
+\c@SR@multifilecount=\count102
+Package statrep Info: Reading custom configuration file statrep.cfg on input li
+ne 90.
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\latex\statrep\statrep.cfg)
+\SR@program@stream=\write3
+\SR@tempfile@stream=\write4
+)
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(C:\Classes\SASandDataMgmt\Assignment2\LaRoche_Assignment2_CPH576D.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+
+(C:\Users\larochd1\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen112
+\scratchbox=\box31
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen113
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks21
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 57.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 57.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+File: sr.tmp  (verbatim)
+
+Overfull \hbox (60.49031pt too wide) in paragraph at lines 108--108
+[] \OT1/cmtt/m/n/10 if (r_gender = U or r_gender = ) then r_gender = .; /*s
+et U or blank to missing in gender*/[] 
+ []
+
+[1
+
+{C:/Users/larochd1/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Package statrep Info: Processing Sascode block gfr on input line 110.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 124.
+File: lst/gfra.lst  (verbatim)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 124.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 124.
+Package statrep Info: Processing listing lst/gfra.lst on input line 124.
+File: lst/gfra1.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra1.lst on input line 124.
+File: lst/gfra2.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra2.lst on input line 124.
+File: lst/gfra3.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra3.lst on input line 124.
+File: lst/gfra4.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra4.lst on input line 124.
+File: lst/gfra5.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra5.lst on input line 124.
+File: lst/gfra6.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra6.lst on input line 124.
+File: lst/gfra7.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra7.lst on input line 124.
+File: lst/gfra8.lst  (verbatim)
+Package statrep Info: Processing listing lst/gfra8.lst on input line 124.
+Package statrep Info: Processing listing  on input line 124.
+
+[2] [3] <png/gfra.png, id=16, 481.8pt x 361.35pt>
+File: png/gfra.png Graphic file (type png)
+ <use png/gfra.png>
+Package pdftex.def Info: png/gfra.png used on input line 125.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+Package statrep Info: Processing graphic png/gfra.png on input line 125.
+Package statrep Info: Processing graphic  on input line 125.
+ [4]
+[5 <C:/Classes/SASandDataMgmt/Assignment2/png/gfra.png (PNG copy)>] [6
+
+]
+[7] [8] [9] [10]
+(C:\Classes\SASandDataMgmt\Assignment2\LaRoche_Assignment2_CPH576D.aux) ) 
+Here is how much of TeX's memory you used:
+ 1947 strings out of 493921
+ 26884 string characters out of 3147274
+ 135161 words of memory out of 3000000
+ 5219 multiletter control sequences out of 15000+200000
+ 7448 words of font info for 27 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,9n,32p,357b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmtt10.pfb>
+Output written on LaRoche_Assignment2_CPH576D.pdf (10 pages, 123771 bytes).
+PDF statistics:
+ 56 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
