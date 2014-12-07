@@ -173,10 +173,10 @@ bmi = wt_pre/(ht_pre**2);
 *simplify diagnosis;
 diagsimp= '';
 if pancreatitis1 ne '' then diagsimp = 'Other';
-if pancreatitis1 = 'Alcohol' then diagsimp =  pancreatitis1;
-if pancreatitis1 = 'Idiopathic' then diagsimp = pancreatitis1;
-if pancreatitis1 = 'Pancreas Divisum' then diagsimp = pancreatitis1;
-if pancreatitis1 = 'Familial' then diagsimp = pancreatitis1;
+if pancreatitis1 = 'Alcohol' then diagsimp =  'Alcohol';
+if pancreatitis1 = 'Idiopathic' then diagsimp = 'Idiopathic';
+if pancreatitis1 = 'Pancreas Divisum' then diagsimp = 'Pancreas Divisum';
+if pancreatitis1 = 'Familial' then diagsimp = 'Familial';
 run;
 *Summarize two groups;
 proc tabulate data = mdat;
@@ -184,7 +184,7 @@ label autoislettx = 'Auto-Islet Treatment';
 label dur = 'Duration of Disease (years)';
 var age bmi dur;
 class autoislettx gender diagsimp race;
-table age*(N mean min max) BMI*(N mean min max) dur*(N mean min max), autoislettx*Gender;
+table age*(N mean min max) BMI*(N mean min max) dur*(N mean min max) Gender*N, autoislettx;
 run;
 
 proc tabulate data = mdat;
@@ -217,8 +217,191 @@ set sf;
 /* create the score */
    PCS = 50 + (PCS * 10);
    MCS = 50 + (MCS * 10);
+drop pf--rp_z;
+drop gh_z--vt_z;
+run;
+
+*create separate data for each visit to retain ptid date, BP_Z, MCS and PCS;
+proc sort data=sfz;
+by patid;
+run;
+proc sort data = mdat;
+by patid;
+run;
+
+*merge into long form;
+data longm;
+merge mdat sfz;
+by patid;
+run;
+
+*calculate months since surgery;
+data longm;
+set longm;
+month_since = round( (fu_dt-surgery_dt)/30.5,1);
+run;
+
+proc sort data =longm;
+by month_since;
+run;
+proc boxplot data = longm;
+label month_since = 'Months since surgery';
+label BP_Z = 'Bodily Pain';
+where month_since in(0,3,6);
+plot BP_Z*month_since;
+run;
+proc boxplot data = longm;
+label month_since = 'Months since surgery';
+label mcs = 'Mental Component Score';
+where month_since in(0,3,6);
+plot mcs*month_since;
+run;
+proc boxplot data = longm;
+label month_since = 'Months since surgery';
+label pcs = 'Physical Component Score';
+where month_since in(0,3,6);
+plot pcs*month_since;
+run;
+*this trend doesn't look so convincing when you look at all time points
+
+*relationship between ieq and dur or bmi;
+proc glm data= mdat;
+model ieq = dur bmi ;
+run;
+*no significant relationship try without outliers;
+proc glm data= mdat;
+where ieqout = 0;
+model ieq = dur bmi ;
+run;
+*after removing outlying ieq values there is a relationship with BMI;
+proc sgplot data = mdat;
+label ieq = 'Islet Gain';
+label bmi = 'Body Mass Index';
+where ieqout = 0;
+reg x=bmi y=ieq/ CLM
+CLMATTRS=(CLMLINEATTRS= 
+   (COLOR=Green PATTERN= ShortDash));
+run;
+proc sgplot data = mdat;
+label ieq = 'Islet Gain';
+label dur = 'Duration';
+where ieqout = 0;
+reg x=dur y=ieq / CLM
+CLMATTRS=(CLMLINEATTRS= 
+   (COLOR=Green PATTERN= ShortDash)); 
+run;
+
+*Test for difference in bodily pain between baseline and 6 months;
+data longm;
+set longm;
+if month_since = 0 then tmp = 'Baseline';
+if month_since = 6 then tmp = '6 Months';
+run;
+
+proc ttest data= longm;
+class tmp;
+var BP_Z;
+run;
+*normality is slightly suspect so check with rank-sum test;
+proc npar1way wilcoxon correct=no data=longm;
+class tmp;
+var BP_Z;
+run;
+*even more significant;
+
+*readmission rates for the two groups overall, at 1 month and 6months;
+*merge mdat and readmit data;
+proc sort data=mdat;
+by patid;
+run;
+proc sort data=amd;
+by patid;
+run;
+data ldat2;
+merge mdat amd;
+by patid;
+run;
+
+data ldat2;
+set ldat2;
+day_since = readm_dt-surgery_dt;
+month_since = (day_since)/30.5;
+run;
+
+*limit ti just cases with a surgery;
+data ldat2;
+set ldat2;
+if surgery_dt = . then delete;
+*remove admission dates before surgery;
+if (read_dt ne .) and (readm_dt < surgery_dt) then delete;
+run;
+
+*check for any recurrenc by limiting to first recurence;
+proc sort data =ldat2;
+by patid readm_dt;
+run;
+data ldat2_first;
+set ldat2;
+if first.patid;
+by patid;
+run;
+
+data ldat2_first;
+set ldat2_first;
+if readm_dt ne . then read = 'Yes';
+if readm_dt = . then read = 'No';
+run;
+
+proc tabulate data = ldat2_first;
+label autoislettx = 'Auto-Islet Status';
+label read = 'Readmission Status';
+class read autoislettx;
+table read, autoislettx*N;
+run;
+
+*limit to only readmited patients to compare ER and overall beteen the two groups;
+data ldat2_ronly;
+set ldat2;
+if readm_dt = . then delete;
+run;
+*limit to only cases where readmits happen in first month;
+proc sort data= ldat2_ronly;
+by patid;
+run;
+data ldat2_1month;
+set ldat2_ronly;
+if month_since > 1 then delete;
+*eliminate repeated visits in the first month;
+if first.patid;
+by patid;
+run;
+
+proc format;
+value er_fmt
+	0 = 'No'
+	1 = 'Yes';
 run;
 
 
+proc tabulate data = ldat2_1month;
+label autoislettx = 'Auto-Islet Status';
+format er er_fmt.;
+class er autoislettx;
+table er, autoislettx;
+run;
 
+*limit to readmits to before 6 months;
+data ldat2_6month;
+set ldat2_ronly;
+if month_since > 6 then delete;
+*eliminate repeated visits in the first month;
+if first.patid;
+by patid;
+run;
 
+proc tabulate data = ldat2_6month;
+label autoislettx = 'Auto-Islet Status';
+format er er_fmt.;
+class er autoislettx;
+table er, autoislettx;
+run;
